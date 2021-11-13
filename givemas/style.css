@@ -1,0 +1,87 @@
+:root {
+  --pb-fill-width: 0%;
+
+  --pb-border: none;
+  --pb-background-color: #969696;
+  --pb-fill-background-color: #830a0a;
+  --pb-fill-color: #eee;
+  --pb-color: #ddd;
+
+  --pb-font-family: days-one;
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: var(--pb-font-family);
+
+}
+
+.pb-main {
+  position: relative;
+  display: inline-block;
+  border: var(--pb-border);
+  height: 100%;
+  width: 100%;
+  font-family: var(--pb-font-family);
+  background-color: var(--pb-background-color);
+}
+
+.info {
+  font-size: 3em;
+  text-align: center;
+  vertical-align: middle;
+  opacity: .5;
+}
+
+.info .current {
+  color:#830a0a;
+  line-height: .8em;
+}
+
+.info .label {
+  color: #0e830a;
+  line-height: .8em;
+}
+
+.pb-main .label {
+  position: absolute;
+  top: 1rem;
+  color: var(--pb-color);
+  z-index: 100;
+  font-size: 4em;
+  left: 43%;
+}
+
+.pb-main .current {
+  position: absolute;
+  top: 1rem;
+  color: var(--pb-fill-color);
+  left: 1em;
+  z-index: 100;
+  font-size: 4em;
+}
+
+.pb-main .goal {
+  position: absolute;
+  top: 1rem;
+  right: 1em;
+  font-size: 4em;
+  color: var(--pb-color);
+  z-index: 100;
+}
+
+.pb-main .fill {
+  -webkit-transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+  position: relative;
+  width: var(--pb-fill-width);
+  height: 100%;
+  background-color: var(--pb-fill-background-color);
+  color: var(--pb-fill-color);
+}
