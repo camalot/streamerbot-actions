@@ -76,3 +76,17 @@ Make sure the height is `128` and the width is `300`. Scale the source down in O
 
 
 # SETTINGS
+
+Edit the values in `settings.js`
+
+```jsonc
+{
+  "FallBackFonts": [ "Roboto", "Droid Sans", "Droid Serif" ], // additional fonts to load
+  "FontName": "Permanent Marker", // primary google web font name to use as the font
+  "Label": "!givemas", // the label used in both progress bar and values overlay
+
+  "SB_WebSocket": "ws://127.0.0.1:1377", // the sb websocket address
+  "SB_CustomWebSocket": "ws://127.0.0.1:4141/givemas" // the custom websocket address
+}
+
+```
