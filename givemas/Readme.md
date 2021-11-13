@@ -1,6 +1,6 @@
 # Givemas Goal
 
-[![](https://i.imgur.com/18lqhcp.png)](https://i.imgur.com/18lqhcp.mp4)
+[![](https://i.imgur.com/jEj3vrP.png)](https://i.imgur.com/9J0dYEw.mp4)
 
 This is [Streamer.Bot](https://streamer.bot) actions with overlay to track revenue for what I call givemas.
 
