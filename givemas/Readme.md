@@ -10,6 +10,16 @@ These actions can be imported in to streamer.bot from the file: `./givemas.actio
 
 # ADDITIONAL STREAMER.BOT SETUP
 
+## ACTION
+
+Until I come up with a better way to handle theses you will need to modify them manually.
+
+Change the `IncrementGivemas` sub-actions to show/hide/play
+
+![](https://i.imgur.com/PsRIYEn.png)
+
+May also want to change the message inside the `Execute Code` sub-action.
+
 ## COMMANDS
 
 Create a command called `!gma` that only allows the broadcaster to apply (or moderators if you want to allow them to increase the total). This command is for situations for other types of revenue that might not have events tied to them. For example, someone tips you via CashApp.
