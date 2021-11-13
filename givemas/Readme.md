@@ -1,5 +1,7 @@
 # Givemas Goal
 
+[![](https://i.imgur.com/18lqhcp.png)](https://i.imgur.com/18lqhcp.mp4)
+
 This is [Streamer.Bot](https://streamer.bot) actions with overlay to track revenue for what I call givemas.
 
 Givemas is from November 1st -> December 25th. All generated revenue to my stream, via bits, subscriptions, and tips, are added together. On December 25th, I give a person working in the service industry, like a waitress, or delivery person, the amount that was generated. 
