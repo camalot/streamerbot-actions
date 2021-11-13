@@ -62,14 +62,16 @@ The location of these files need to be changed in the `IncrementGivemas` and `Gi
 ## PROGRESS BAR OVERLAY
 Add a browser source and point it to your path of `givemas/goal.html`. This should **NOT** be a `local file`. You should use a `file://` path like the following.
 
-![](https://i.imgur.com/D5Dge8f.png)
+![](https://i.imgur.com/D5Dge8f.png)  
 
 Make sure the height is `128` and the width is `1920`. Scale the source down in OBS/SLOBS after you add it.
 
 ## VALUE OVERLAY
 Add a browser source and point it to your path of `givemas/value.html`. This should **NOT** be a `local file`. You should use a `file://` path like the following.
 
-![](https://i.imgur.com/Zshitg1.png)
+![](https://i.imgur.com/Zshitg1.png)  
+
+
 Make sure the height is `128` and the width is `300`. Scale the source down in OBS/SLOBS after you add it.
 
 
