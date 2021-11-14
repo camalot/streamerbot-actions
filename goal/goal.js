@@ -95,7 +95,6 @@
     //  Websocket Event: OnOpen
     //-------------------------------------------
     socket.onopen = function () {
-      // AnkhBot Authentication Information
       const auth = {
         "author": "DarthMinos",
         "website": "https://perks.darthminos.tv",
@@ -104,10 +103,10 @@
           "general": ["custom"],
           "websocketClient": ["open", "message"],
           "custom": [
-            "EVENT_GIVEMAS_UPDATE"
+            "EVENT_GOAL_UPDATE"
           ]
         },
-        "id": "givemas"
+        "id": "gpb-overlay"
       };
       socket.send(JSON.stringify(auth));
     };
@@ -127,20 +126,20 @@
         initSocket.onmessage = function (message) { console.log(`init message: ${message}`); };
         return;
       }
-
+      // parse socketMessage.data, if it is a string.
       let eventData = typeof socketMessage.data === "string" ? JSON.parse(socketMessage.data || "{}") : socketMessage.data;
       if (!eventData) {
         return;
       }
 
-      let payload = typeof eventData.data === "string" ? JSON.parse(eventData.data || "{}") : eventData.data;
+      let payload = eventData;
       if (payload && payload.data && payload.event) {
         let eventName = payload.event;
         switch (eventName) {
-          case "EVENT_GIVEMAS_UPDATE":
+          case "EVENT_GOAL_UPDATE":
             /*
               {
-                  "event": "EVENT_GIVEMAS_UPDATE",
+                  "event": "EVENT_GOAL_UPDATE",
                   "data": {
                       "increase": 0.17,"
                       "increaseFormatted": "$0.17",

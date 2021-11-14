@@ -6,5 +6,5 @@ window.DEFAULT_SETTINGS = {
   Label: "!givemas",
 
   SB_WebSocket: "ws://127.0.0.1:1377",
-  SB_CustomWebSocket: "ws://127.0.0.1:4141/givemas"
+  SB_CustomWebSocket: "ws://127.0.0.1:4141/goal"
 };
