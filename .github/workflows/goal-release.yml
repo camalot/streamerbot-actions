@@ -15,7 +15,7 @@ on:
     - closed
 jobs:
   publish:
-    if: github.event.pull_request.merged == true || github.event == 'push'
+    # if: github.event.pull_request.merged == true || github.event == 'push'
     runs-on: ubuntu-latest
     steps: 
     - uses: actions/checkout@v2
