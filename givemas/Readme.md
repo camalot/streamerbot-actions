@@ -14,13 +14,22 @@ These actions can be imported in to streamer.bot from the file: `./givemas.actio
 
 ## ACTION
 
-Until I come up with a better way to handle theses you will need to modify them manually.
 
 Change the `IncrementGivemas` sub-actions to show/hide/play
 
 ![](https://i.imgur.com/PsRIYEn.png)
 
-May also want to change the message inside the `Execute Code` sub-action.
+
+
+## IncrementGivemas OUTPUT ARGUMENTS
+
+- `gmgIncrease`: The numeric value of how much it is increasing .
+- `gmgIncreaseFormatted`: The formatted value of how much it is increasing.
+- `gmgTotal`: The numeric value for the current total.
+- `gmgTotalFormatted`: The formatted value for the current total.
+- `gmgGoal`: The numeric value for the goal.
+- `gmgGoalFormatted`: The formatted value for the goal.
+
 
 ## COMMANDS
 
@@ -55,10 +64,10 @@ Set up Sub/Re-Sub/Gift Sub/Gift Bomb with the following.
 
 Making sure to set the action for each Tier Type:
 
-Prime: GivemasIncSubTier1
-Tier1: GivemasIncSubTier1
-Tier2: GivemasIncSubTier2
-Tier2: GivemasIncSubTier3
+- Prime: GivemasIncSubTier1
+- Tier1: GivemasIncSubTier1
+- Tier2: GivemasIncSubTier2
+- Tier2: GivemasIncSubTier3
 
 ![](https://i.imgur.com/Ok3fpez.png)
 
