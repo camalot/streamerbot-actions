@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+echo -n "$1" | base64 -d | tail -c +5 | gzip -dc
