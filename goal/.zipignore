@@ -1,0 +1,5 @@
+./goal/actions/**
+./goal/actions/
+**/actions.json
+**/.jshintrc
+**/.zipignore
