@@ -1,5 +1,6 @@
 "use strict";
 window.DEFAULT_SETTINGS = {
+  // fonts from https://fonts.google.com/
   FallBackFonts: [ "Roboto", "Droid Sans", "Droid Serif" ],
   FontName: "Permanent Marker", // google web font name
   Label: "!givemas",
