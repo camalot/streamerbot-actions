@@ -46,5 +46,6 @@ jobs:
       env:
         GITHUB_TOKEN: "${{ github.token }}"
       with:
+        tag_name: "${{ steps.semvers.outputs.v_patch }}"
         name: "goal-overlay-${{ steps.semvers.outputs.v_patch }}"
         files: goal-overlay-${{ steps.semvers.outputs.v_patch }}.zip
