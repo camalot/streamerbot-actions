@@ -1,0 +1,324 @@
+{
+  "version": 1,
+  "name": "Goal Actions",
+  "actions": [
+    {
+      "id": "f8a9a8cc-705e-4daf-8c2a-801df2e81852",
+      "queue": null,
+      "enabled": true,
+      "name": "GoalIncrement",
+      "group": "Goal",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "name": "",
+          "description": "",
+          "keepAlive": false,
+          "references": [
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
+          ],
+          "byteCode": "${actions/GoalIncrement.cs}",
+          "precompile": false,
+          "delayStart": false,
+          "id": "991f8d1a-7916-4fd7-bd9e-d739c884f8f2",
+          "weight": 0.0,
+          "type": 99999,
+          "group": "",
+          "index": 2
+        },
+        {
+          "sceneName": "CustomAlerts",
+          "sourceName": "CELEBRATION",
+          "state": 0,
+          "connectionId": "00000000-0000-0000-0000-000000000000",
+          "id": "cbf5f384-4adf-4251-95da-408fe211d202",
+          "weight": 0.0,
+          "type": 30,
+          "group": "",
+          "index": 0
+        },
+        {
+          "sceneName": "CustomAlerts",
+          "sourceName": "CELEBRATION",
+          "state": 1,
+          "connectionId": "00000000-0000-0000-0000-000000000000",
+          "id": "7ac9e890-32cf-4c0a-ae9e-cfcec63a5aac",
+          "weight": 0.0,
+          "type": 30,
+          "group": null,
+          "index": 5
+        },
+        {
+          "value": 10000,
+          "maxValue": 0,
+          "random": false,
+          "id": "50287bac-a156-46c5-9549-3214d45fa08e",
+          "weight": 0.0,
+          "type": 1002,
+          "group": "",
+          "index": 4
+        },
+        {
+          "device": null,
+          "soundFile": "D:\\Data\\OBS\\audio\\soundboards\\woohoo.mp3",
+          "finishBeforeContinuing": false,
+          "volume": 0.9,
+          "id": "5f3e2671-3d0a-4b81-939d-57335fa403fb",
+          "weight": 0.0,
+          "type": 1,
+          "group": "",
+          "index": 1
+        },
+        {
+          "text": "🎁The Givemas total has increased by %gpbIncreaseFormatted%. The Current Givemas Total is: %gpbTotalFormatted% / %gpbGoalFormatted%🎁",
+          "preferredAccount": 0,
+          "id": "30f0d6cf-d26c-42e0-af5f-14b3287e6b38",
+          "weight": 0.0,
+          "type": 10,
+          "group": "",
+          "index": 3
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "b6963c50-c64f-445b-a16a-24869306daa3",
+      "queue": null,
+      "enabled": true,
+      "name": "GoalIncSubTier1",
+      "group": "Goal",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "name": "",
+          "description": "",
+          "keepAlive": false,
+          "references": [
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
+          ],
+          "byteCode": "${actions/GoalIncSubTier1.cs}",
+          "precompile": false,
+          "delayStart": false,
+          "id": "c6b335e9-ef37-4981-892b-a19983a62e27",
+          "weight": 0.0,
+          "type": 99999,
+          "group": null,
+          "index": 0
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "c67ab9ee-3eea-41f3-8992-9bced7be4181",
+      "queue": null,
+      "enabled": true,
+      "name": "GoalIncSubTier2",
+      "group": "Goal",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "name": "",
+          "description": "",
+          "keepAlive": false,
+          "references": [
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
+          ],
+          "byteCode": "${actions/GoalIncSubTier2.cs}",
+          "precompile": false,
+          "delayStart": false,
+          "id": "b1aeebbc-e994-43ae-93f6-2c37f1a771c0",
+          "weight": 0.0,
+          "type": 99999,
+          "group": null,
+          "index": 0
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "e85b1ea6-c677-46d0-8368-68506359fc4a",
+      "queue": null,
+      "enabled": true,
+      "name": "GoalIncSubTier3",
+      "group": "Goal",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "name": "",
+          "description": "",
+          "keepAlive": false,
+          "references": [
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
+          ],
+          "byteCode": "${actions/GoalIncSubTier3.cs}",
+          "precompile": false,
+          "delayStart": false,
+          "id": "646e9f09-73ee-492f-9aea-ad2f958508f3",
+          "weight": 0.0,
+          "type": 99999,
+          "group": null,
+          "index": 0
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "9f8dfe50-1747-4e86-bd35-5119f1513131",
+      "queue": null,
+      "enabled": true,
+      "name": "GoalIncBits",
+      "group": "Goal",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "name": "",
+          "description": "",
+          "keepAlive": false,
+          "references": [
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
+          ],
+          "byteCode": "${actions/GoalIncBits.cs}",
+          "precompile": false,
+          "delayStart": false,
+          "id": "d196297a-5a27-4fa0-bd7d-75b4d5b547fd",
+          "weight": 0.0,
+          "type": 99999,
+          "group": null,
+          "index": 0
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "13ba6ab9-536a-48c8-9419-64233607f067",
+      "queue": null,
+      "enabled": true,
+      "name": "GoalIncTip",
+      "group": "Goal",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "name": "",
+          "description": "",
+          "keepAlive": false,
+          "references": [
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
+          ],
+          "byteCode": "${actions/GoalIncTip.cs}",
+          "precompile": false,
+          "delayStart": false,
+          "id": "d85a57a6-f7b4-4e69-8b5d-68a93bbdee4a",
+          "weight": 0.0,
+          "type": 99999,
+          "group": null,
+          "index": 0
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "5fa638fa-8fb0-4823-92bb-1c15a15bd93c",
+      "queue": null,
+      "enabled": true,
+      "name": "GoalInit",
+      "group": "Goal",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "name": "",
+          "description": "",
+          "keepAlive": false,
+          "references": [
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
+          ],
+          "byteCode": "${actions/GoalInit.cs}",
+          "precompile": false,
+          "delayStart": false,
+          "id": "7681563b-ebd6-4b9a-9d0c-3eb7b3f59473",
+          "weight": 0.0,
+          "type": 99999,
+          "group": null,
+          "index": 2
+        },
+        {
+          "destination": 0,
+          "variableName": "gpb_goal_file",
+          "persisted": true,
+          "source": 1,
+          "value": "D:\\Data\\OBS\\labels\\givemas_goal.txt",
+          "id": "5f35e635-9e6d-452d-ac39-a87283137b94",
+          "weight": 0.0,
+          "type": 122,
+          "group": "",
+          "index": 1
+        },
+        {
+          "destination": 0,
+          "variableName": "gpb_current_file",
+          "persisted": true,
+          "source": 1,
+          "value": "D:\\Data\\OBS\\labels\\givemas_current.txt",
+          "id": "958e2f70-d909-42d4-b55e-1b2131301fbb",
+          "weight": 0.0,
+          "type": 122,
+          "group": "",
+          "index": 0
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "cd8f9095-c157-4b67-8c22-48eed8337666",
+      "queue": null,
+      "enabled": true,
+      "name": "GoalWebSocket",
+      "group": "Goal",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "name": "",
+          "description": "",
+          "keepAlive": false,
+          "references": [
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\System.dll"
+          ],
+          "byteCode": "${actions/GoalWebSocket.cs}",
+          "precompile": false,
+          "delayStart": false,
+          "id": "3f6eb65b-db20-4e57-8af9-c50776734468",
+          "weight": 0.0,
+          "type": 99999,
+          "group": null,
+          "index": 0
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    }
+  ],
+  "queues": []
+}

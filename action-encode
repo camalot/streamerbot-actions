@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+input_file="$1";
+output_file="${input_file%.*}.action";
+echo -n -e "\x78\x83\x52\x69" > action.dat;
+gzip -ck "$1" >> action.dat;
+base64 -w 0 action.dat > $output_file
+rm -f action.dat
