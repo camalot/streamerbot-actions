@@ -2,7 +2,7 @@
 
 [![](https://i.imgur.com/jEj3vrPm.png)](https://i.imgur.com/9J0dYEw.mp4)
 
-This is [Streamer.Bot](https://streamer.bot) actions with overlay to track revenue for what a goal.
+This is [Streamer.Bot](https://streamer.bot) actions with overlay to track revenue for a goal.
 
 These actions can be imported in to streamer.bot from the file: `./goal.action`
 
