@@ -1,4 +1,4 @@
-# GOAL ACTIONS
+# GOAL OVERLAY ACTIONS
 
 [![](https://i.imgur.com/jEj3vrPm.png)](https://i.imgur.com/9J0dYEw.mp4)
 
@@ -17,8 +17,6 @@ Set the global variables for `gpb_current_file` and `gpb_goal_file` in the `Goal
 Change the `GoalIncrement` sub-actions to show/hide/play
 
 ![](https://i.imgur.com/PsRIYEn.png)
-
-
 
 ## GoalIncrement OUTPUT ARGUMENTS
 
