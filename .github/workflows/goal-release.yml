@@ -42,10 +42,22 @@ jobs:
         custom_tag: "${{ steps.semvers.outputs.v_patch }}"
         tag_prefix: ''
     - name: Create Release
-      uses: softprops/action-gh-release@v1
-      env:
-        GITHUB_TOKEN: "${{ github.token }}"
+      uses: ncipollo/release-action@v1.8.6
       with:
-        tag_name: "${{ steps.semvers.outputs.v_patch }}"
-        name: "goal-overlay-${{ steps.semvers.outputs.v_patch }}"
-        files: goal-overlay-${{ steps.semvers.outputs.v_patch }}.zip
+        artifacts: goal-overlay-${{ steps.semvers.outputs.v_patch }}.zip
+        name: goal-overlay-${{ steps.semvers.outputs.v_patch }}
+        tag: ${{ steps.semvers.outputs.v_patch }}
+        token: "${{ github.token }}"
+  mergeToMain:
+    runs-on: ubuntu-latest
+    needs:
+    - publish
+    steps:
+    - uses: actions/checkout@v2
+    - name: Merge develop -> main
+      uses: devmasx/merge-branch@v1.3.1
+      with:
+        type: now
+        from_branch: develop
+        target_branch: main
+        github_token: ${{ github.token }}
