@@ -18,8 +18,6 @@ Change the `GoalIncrement` sub-actions to show/hide/play
 
 ![](https://i.imgur.com/PsRIYEn.png)
 
-
-
 ## GoalIncrement OUTPUT ARGUMENTS
 
 - `gpbIncrease`: The numeric value of how much it is increasing .
