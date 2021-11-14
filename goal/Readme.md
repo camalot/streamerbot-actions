@@ -6,7 +6,7 @@ This is [Streamer.Bot](https://streamer.bot) actions with overlay to track reven
 
 These actions can be imported in to streamer.bot from the file: `./goal.action`
 
-![](https://i.imgur.com/5oOcV8U.png)
+![](https://i.imgur.com/DaAo0Ib.png)
 
 # ADDITIONAL STREAMER.BOT SETUP
 
@@ -34,7 +34,7 @@ Change the `GoalIncrement` sub-actions to show/hide/play
 
 Create a command called `!gma` that only allows the broadcaster to apply (or moderators if you want to allow them to increase the total). This command is for situations for other types of revenue that might not have events tied to them. For example, someone tips you via CashApp.
 
-![](https://i.imgur.com/OinXgQ0.png)
+![](https://i.imgur.com/hUfY53N.png)
 
 ## SERVERS/CLIENTS
 
@@ -44,20 +44,20 @@ The addresses for these 2 websocket servers need to be set in `./settings.js`.
 
 ![](https://i.imgur.com/b3XTsOY.png)
 
-![](https://i.imgur.com/HEF96Wt.png)
+![](https://i.imgur.com/VJUeJYz.png)
 
 ## EVENTS
 
 Now we need to set up the events to trigger the goal actions.
 
 First setup the Streamlabs Tip Event  
-![](https://i.imgur.com/i9LJOcn.png)
+![](https://i.imgur.com/B4RB9iw.png)
 
 Next is StreamElements Tip Event  
-![](https://i.imgur.com/jNfMSKP.png)
+![](https://i.imgur.com/gNffaNt.png)
 
 Now set up for Cheers/Bits  
-![](https://i.imgur.com/7AOnQi6.png)
+![](https://i.imgur.com/kMZYa3z.png)
 
 Set up Sub/Re-Sub/Gift Sub/Gift Bomb with the following. 
 
@@ -68,7 +68,7 @@ Making sure to set the action for each Tier Type:
 - Tier2: GoalIncSubTier2
 - Tier2: GoalIncSubTier3
 
-![](https://i.imgur.com/Ok3fpez.png)
+![](https://i.imgur.com/OTlZREw.png)
 
 Finally, we need to set up a file watcher for `%gpb_current_file%` and `%gpb_goal_file%` files and set their Action to be `GoalInit`.
 
