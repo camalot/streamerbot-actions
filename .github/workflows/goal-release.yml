@@ -35,8 +35,8 @@ jobs:
     - name: Encode and Package
       run: |
         for f in goal/actions/*; do 
-          f_data=$(cat $f | base64);
-          sed -i "s/\${$f}/$f_data/" goal/actions.json; 
+          f_data=$(cat $f | base64 -w 0);
+          sed -i "s|\${$f}|$f_data|" goal/actions.json; 
         done;
         echo -n -e "\x78\x83\x52\x69" > action.dat;
         gzip -ck "$1" >> action.dat;

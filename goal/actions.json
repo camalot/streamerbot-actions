@@ -19,7 +19,7 @@
           "references": [
             "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
           ],
-          "byteCode": "${actions/GoalIncrement.cs}",
+          "byteCode": "${goal/actions/GoalIncrement.cs}",
           "precompile": false,
           "delayStart": false,
           "id": "991f8d1a-7916-4fd7-bd9e-d739c884f8f2",
@@ -101,7 +101,7 @@
           "references": [
             "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
           ],
-          "byteCode": "${actions/GoalIncSubTier1.cs}",
+          "byteCode": "${goal/actions/GoalIncSubTier1.cs}",
           "precompile": false,
           "delayStart": false,
           "id": "c6b335e9-ef37-4981-892b-a19983a62e27",
@@ -131,7 +131,7 @@
           "references": [
             "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
           ],
-          "byteCode": "${actions/GoalIncSubTier2.cs}",
+          "byteCode": "${goal/actions/GoalIncSubTier2.cs}",
           "precompile": false,
           "delayStart": false,
           "id": "b1aeebbc-e994-43ae-93f6-2c37f1a771c0",
@@ -161,7 +161,7 @@
           "references": [
             "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
           ],
-          "byteCode": "${actions/GoalIncSubTier3.cs}",
+          "byteCode": "${goal/actions/GoalIncSubTier3.cs}",
           "precompile": false,
           "delayStart": false,
           "id": "646e9f09-73ee-492f-9aea-ad2f958508f3",
@@ -191,7 +191,7 @@
           "references": [
             "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
           ],
-          "byteCode": "${actions/GoalIncBits.cs}",
+          "byteCode": "${goal/actions/GoalIncBits.cs}",
           "precompile": false,
           "delayStart": false,
           "id": "d196297a-5a27-4fa0-bd7d-75b4d5b547fd",
@@ -221,7 +221,7 @@
           "references": [
             "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
           ],
-          "byteCode": "${actions/GoalIncTip.cs}",
+          "byteCode": "${goal/actions/GoalIncTip.cs}",
           "precompile": false,
           "delayStart": false,
           "id": "d85a57a6-f7b4-4e69-8b5d-68a93bbdee4a",
@@ -251,7 +251,7 @@
           "references": [
             "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll"
           ],
-          "byteCode": "${actions/GoalInit.cs}",
+          "byteCode": "${goal/actions/GoalInit.cs}",
           "precompile": false,
           "delayStart": false,
           "id": "7681563b-ebd6-4b9a-9d0c-3eb7b3f59473",
@@ -306,7 +306,7 @@
             "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll",
             "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\System.dll"
           ],
-          "byteCode": "${actions/GoalWebSocket.cs}",
+          "byteCode": "${goal/actions/GoalWebSocket.cs}",
           "precompile": false,
           "delayStart": false,
           "id": "3f6eb65b-db20-4e57-8af9-c50776734468",
