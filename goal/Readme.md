@@ -10,11 +10,11 @@ These actions can be imported in to streamer.bot from the file: `./goal.action`
 
 # ADDITIONAL STREAMER.BOT SETUP
 
-## ACTION
+## ACTIONS
 
 Set the global variables for `gpb_current_file` and `gpb_goal_file` in the `GoalInit` action. These are the path to the files that store what the current value is for the running goal.
 
-Change the `GoalIncrement` sub-actions to show/hide/play
+Change the `GoalIncrement` sub-actions to show/hide/play. This might change to a different action so the notification actions are separate.
 
 ![](https://i.imgur.com/PsRIYEn.png)
 
