@@ -4,7 +4,7 @@
 
 This is [Streamer.Bot](https://streamer.bot) actions with overlay to track revenue for a goal.
 
-These actions can be imported in to streamer.bot from the file: `./goal.action`
+These actions can be imported in to streamer.bot from the file: `./goal.action` in the release package
 
 ![](https://i.imgur.com/DaAo0Ib.png)
 
