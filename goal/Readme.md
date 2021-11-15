@@ -102,7 +102,7 @@ Edit the values in `settings.js`
   "FallBackFonts": [ "Roboto", "Droid Sans", "Droid Serif" ], // additional fonts to load
   "FontName": "Permanent Marker", // primary google web font name to use as the font
   "Label": "!goal", // the label used in both progress bar and values overlay
-
+  // hoping to not need both websockets at some point.
   "SB_WebSocket": "ws://127.0.0.1:1377", // the sb websocket address
   "SB_CustomWebSocket": "ws://127.0.0.1:4141/goal" // the custom websocket address
 }
