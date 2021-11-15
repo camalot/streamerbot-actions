@@ -4,17 +4,20 @@
 
 This is [Streamer.Bot](https://streamer.bot) actions with overlay to track revenue for a goal.
 
-These actions can be imported in to streamer.bot from the file: `./goal.action`
+These actions can be imported in to streamer.bot from the file: `./goal.action` in the release package
 
 ![](https://i.imgur.com/DaAo0Ib.png)
 
 # ADDITIONAL STREAMER.BOT SETUP
 
-## ACTION
+Only actions are able to be imported currently, so all other settings need to be done manually.
+
+
+## ACTIONS
 
 Set the global variables for `gpb_current_file` and `gpb_goal_file` in the `GoalInit` action. These are the path to the files that store what the current value is for the running goal.
 
-Change the `GoalIncrement` sub-actions to show/hide/play
+Change the `GoalIncrement` sub-actions to show/hide/play. This might change to a different action so the notification actions are separate.
 
 ![](https://i.imgur.com/PsRIYEn.png)
 
@@ -99,7 +102,7 @@ Edit the values in `settings.js`
   "FallBackFonts": [ "Roboto", "Droid Sans", "Droid Serif" ], // additional fonts to load
   "FontName": "Permanent Marker", // primary google web font name to use as the font
   "Label": "!goal", // the label used in both progress bar and values overlay
-
+  // hoping to not need both websockets at some point.
   "SB_WebSocket": "ws://127.0.0.1:1377", // the sb websocket address
   "SB_CustomWebSocket": "ws://127.0.0.1:4141/goal" // the custom websocket address
 }
