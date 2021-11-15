@@ -10,6 +10,9 @@ These actions can be imported in to streamer.bot from the file: `./goal.action`
 
 # ADDITIONAL STREAMER.BOT SETUP
 
+Only actions are able to be imported currently, so all other settings need to be done manually.
+
+
 ## ACTIONS
 
 Set the global variables for `gpb_current_file` and `gpb_goal_file` in the `GoalInit` action. These are the path to the files that store what the current value is for the running goal.
