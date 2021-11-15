@@ -32,8 +32,13 @@ jobs:
       with:
         version: ${{ steps.previoustag.outputs.tag }}
         strict: false
-    - uses: docker://sumolari/gzip:latest
-
+    # - name: Prep Actions File
+    #   run: |
+        
+    # - uses: docker://sumolari/gzip:latest
+    #   name: Encode Actions File
+    #   with:
+    #     args: 
     - name: Encode and Package
       run: |
         for f in goal/actions/*; do 
@@ -41,7 +46,7 @@ jobs:
           sed -i "s|\${$f}|$f_data|" goal/actions.json; 
         done;
         echo -n -e "\x78\x83\x52\x69" > action.dat;
-        gzip -ck "$1" >> action.dat;
+        gzip -ck "goal/actions.json" >> action.dat;
         base64 -w 0 action.dat > goal/goal.action;
         zip -x $(tr '\n' ' ' < goal/.zipignore) -r goal-overlay-${{ steps.semvers.outputs.v_patch }}.zip ./goal/**
     - name: Create the Version Tag
