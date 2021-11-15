@@ -32,8 +32,8 @@ jobs:
       with:
         version: ${{ steps.previoustag.outputs.tag }}
         strict: false
-    - uses: sumolari/gzip:latest
-    
+    - uses: docker://sumolari/gzip:latest
+
     - name: Encode and Package
       run: |
         for f in goal/actions/*; do 
