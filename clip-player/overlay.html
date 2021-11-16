@@ -1,0 +1,28 @@
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title>Clip Overlay</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="video-container" id="video-container">
+      <div class="video-box full">
+        <label class="title hidden"></label>
+        <label class="views hidden"></label>
+        <div class="watermark hidden"></div>
+        <progress value="0" max="100" class="hidden"></progress>
+        <video class="video-player" autoplay></video>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+    <script src="settings.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>

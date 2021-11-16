@@ -1,0 +1,139 @@
+:root {
+  --progress-bg: "transparent";
+  --progress-fill: #ffb53b;
+
+  --video-width: 1920px;
+  --video-height: 1080px;
+
+  --font-name: bangers;
+
+  --title-font-color: #fff;
+  --title-font-size: 3.5em;
+  --title-text-align: center;
+
+  --watermark: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=");
+}
+
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  letter-spacing: 3px;
+  overflow: hidden;
+}
+.hidden {
+  display: none !important;
+}
+
+#video-container .video-box .video-player {
+  /* height: 100%;
+  width: 100%; */
+  width: var(--video-width);
+  height: var(--video-height);
+
+}
+
+
+.watermark {
+  background-image: var(--watermark);
+  height: 128px;
+  width: 128px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  opacity: .5;
+  z-index: 100;
+}
+
+#video-container .video-box label {
+  position: absolute;
+}
+
+#video-container .video-box .title {
+  font-size: var(--title-font-size);
+  color: var(--title-font-color);
+  font-weight: bold;
+  font-family: var(--font-name);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 5px 0 0 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  text-align: var(--title-text-align);
+}
+
+#video-container .video-box .views {
+  display: none;
+}
+
+#video-container .video-box video {
+  width: var(--video-width);
+  height: var(--video-height);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Get rid of default border in Firefox. */
+  border: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: var(--video-width);
+  height: 7px;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  z-index: 99;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: var(--progress-bg);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--progress-fill);
+
+  -webkit-transition: width 1000ms ease;
+  -moz-transition: width 1000ms ease;
+  -o-transition: width 1000ms ease;
+  transition: width 1000ms ease;
+}
+
+.progress-container .progress-bar {
+  height: 200px;
+  width: 50px;
+  background-color: black;
+  padding: 4px;
+  display: inline-block;
+}
+
+.progress-container .progress-bar .fill {
+  background-color: red;
+  bottom: 0;
+  top: 50%;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
