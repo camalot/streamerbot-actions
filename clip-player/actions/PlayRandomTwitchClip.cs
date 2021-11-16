@@ -5,15 +5,13 @@ using Newtonsoft.Json;
 using System.Net;
 
 
-public class Payload<T>
-{
+public class Payload<T> {
   [JsonProperty("event")]
   public string Event { get; set; }
   [JsonProperty("data")]
   public T Data { get; set; }
 }
-public class VideoPayload
-{
+public class VideoPayload {
   [JsonProperty("creator")]
   public string CreatorUserName { get; set; }
   [JsonProperty("broadcaster")]
@@ -32,19 +30,14 @@ public class VideoPayload
   public int ViewCount { get; set; }
 }
 
-public class CPHInline
-{
-  public bool Execute()
-  {
+public class CPHInline {
+  public bool Execute() {
     var targetUser = string.Empty;
     var clipCount = 1;
 
-    if (args.ContainsKey("targetUser"))
-    {
+    if (args.ContainsKey("targetUser")) {
       targetUser = args["targetUser"].ToString();
-    }
-    else if (args.ContainsKey("input0"))
-    {
+    } else if (args.ContainsKey("input0")) {
       targetUser = args["input0"].ToString();
     }
 
@@ -72,11 +65,9 @@ public class CPHInline
       CPH.SetArgument($"clipViewCount{count}", clip.ViewCount);
       CPH.SetArgument($"clipThumbnailUrl{count}", clip.ThumbnailUrl);
 
-      var payload = new Payload<VideoPayload>
-      {
+      var payload = new Payload<VideoPayload> {
         Event = "EVENT_CLIPOVERLAY_PLAY",
-        Data = new VideoPayload
-        {
+        Data = new VideoPayload {
           BroadcasterUserName = clip.BroadcasterName,
           BroadcasterProfileImageUri = GetUserProfileImage(clip.BroadcasterName),
           VideoUri = RegexReplace("(.*)-preview-.*", clip.ThumbnailUrl, "$1.mp4"),
@@ -92,23 +83,17 @@ public class CPHInline
     }
     return true;
   }
-  private string GetUserProfileImage(string user)
-  {
-    try
-    {
-      using (var client = new WebClient())
-      {
+  private string GetUserProfileImage(string user) {
+    try {
+      using (var client = new WebClient()) {
         return client.DownloadString($"https://decapi.me/twitch/avatar/{user.ToLower()}").Trim();
       }
-    }
-    catch (Exception ex)
-    {
+    } catch (Exception ex) {
       CPH.LogDebug(ex.ToString());
       return "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
     }
   }
-  private string RegexReplace(string pattern, string input, string replacement)
-  {
+  private string RegexReplace(string pattern, string input, string replacement) {
     Regex re = new Regex(pattern, RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.IgnorePatternWhitespace | RegexOptions.IgnoreCase);
     return re.Replace(input, replacement);
   }

@@ -9,37 +9,29 @@ using Newtonsoft.Json;
 using System.Net;
 using System.Text;
 
-public class Payload<T>
-{
+public class Payload<T> {
     [JsonProperty("event")]
     public string Event { get; set; }
     [JsonProperty("data")]
     public T Data { get; set; }
 }
-public class VideoPayload
-{
+public class VideoPayload {
     [JsonProperty("videoUri")]
     public string VideoUri { get; set; }
 }
 
-public class CPHInline
-{
-    public bool Execute()
-    {
+public class CPHInline {
+    public bool Execute() {
         var inputVideo = string.Empty;
 
-        if (args.ContainsKey("twitchVideo"))
-        {
+        if (args.ContainsKey("twitchVideo")) {
             inputVideo = args["twitchVideo"].ToString();
-        }
-        else if (args.ContainsKey("input0"))
-        {
+        } else if (args.ContainsKey("input0")) {
             inputVideo = args["input0"].ToString();
         }
 
 
-        if (string.IsNullOrWhiteSpace(inputVideo))
-        {
+        if (string.IsNullOrWhiteSpace(inputVideo)) { 
             return false;
         }
 
@@ -49,8 +41,7 @@ public class CPHInline
             return false;
         }
 
-        var payload = new Payload<VideoPayload>
-        {
+        var payload = new Payload<VideoPayload> {
             Event = "EVENT_CLIPOVERLAY_PLAY",
             Data = new VideoPayload {
                 VideoUri = clipVideoUrl,
@@ -60,12 +51,10 @@ public class CPHInline
         return true;
     }
 
-    private string GetVideoUrlFromClipr(string twitchVideoUrl)
-    {
+    private string GetVideoUrlFromClipr(string twitchVideoUrl) {
         var twitchIdRegex = new Regex(@"https:\/\/(?:www|clips)\.twitch\.tv\/(?:[^\/]+\/clip\/)?(?<id>.*?)(?:\?.*)?$");
         var match = twitchIdRegex.Match(twitchVideoUrl);
-        if (!match.Success)
-        {
+        if (!match.Success) {
             return null;
         }
         var clipId = match.Groups["id"].Value;
@@ -73,8 +62,7 @@ public class CPHInline
         var html = GetWebContent(cliprUrl);
         var regex = new Regex(@"href=""(?<url>https:\/\/.*?\.twitch\.tv\/.*?\.mp4)""");
         match = regex.Match(html);
-        if (!match.Success)
-        {
+        if (!match.Success) {
             return null;
         }
         var cliprVideoUrl = match.Groups["url"].Value;
@@ -82,8 +70,7 @@ public class CPHInline
     }
 
     private string GetWebContent(string url) {
-        using (var client = new WebClient())
-        {
+        using (var client = new WebClient()) {
             client.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36");
             client.Headers.Add("Referer", url);
             var data = client.DownloadData(url);
