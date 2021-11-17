@@ -2,9 +2,10 @@
 
 This is actions and overlay that will play different types of clips.
 
-- PlayTwitchClip
-- PlayRandomTwitchClip
-- PlayTikTokVideo
+- [PlayTwitchClip](#playtwitchclip)
+- [PlayRandomTwitchClip](#playrandomtwitchclip)
+- [PlayTikTokVideo](#playtiktokvideo)
+- [PlayVideoFile](#playvideofile)
 
 
 # REQUIREMENTS
@@ -18,6 +19,12 @@ Vote up on [this suggestion](https://ideas.streamer.bot/posts/159/nuget-support-
 
 This will play the clip that is sent in as `%input0%` or `%twitchVideo%`
 
+### ARGUMENT INPUTS
+| NAME | ARGUMENT | DESCRIPTION |  
+| --- | :--- | --- |
+| Url | <ul><li>`%input0%`</li><li>`%twitchVideo%`</li></ul> | The twitch clip url |  
+
+
 A regex command that matches the following:
 
 ```regex
@@ -26,7 +33,13 @@ https:\/\/(?:www|clips)\.twitch\.tv\/(?:[^\/]+\/clip\/)?(?<id>.*?)(?:\?.*)?(?:\s
 
 ## PlayRandomTwitchClip
 
-This will play `N` number of random clips for a user that is specified via `%input0%` or `%targetUser%`
+This will play `N` number of random clips for a user
+### ARGUMENT INPUTS
+| NAME | ARGUMENT | DESCRIPTION |  
+| --- | :--- | --- |
+| TargetUser | <ul><li>`%input0%`</li><li>`%targetUser%`</li></ul> | The target user to play clips for |  
+
+### ARGUMENT OUTPUTS
 
 The number of clips is specified via `%clipCount%`. The default is 1.
 It will set the following arguments, where `#` is the index of the clip:
@@ -44,9 +57,22 @@ Example command: `!so DarthMinos`
 
 ## PlayTikTokVideo
 
-This will play a TikTok video that is specified via `%input0%` or `%tiktokVideo%`.
+This will play a TikTok video from the tiktok video url
+
+### ARGUMENT INPUTS
+| NAME | ARGUMENT | DESCRIPTION |  
+| --- | :--- | --- |
+| Url | <ul><li>`%input0%`</li><li>`%tiktokVideo%`</li></ul> | The tiktok url to the video |  
 
 A regex command that matches the following:
 ```regex
 https:\/\/(?:www.)?tiktok\.com\/@(.*?)\/video\/(.*?)(\?.*?|$|\s)
 ```
+
+## PlayVideoFile
+
+This will 
+
+| NAME | ARGUMENT | DESCRIPTION |  
+| --- | :--- | --- |
+| Url | <ul><li>`%input0%`</li><li>`%video%`</li></ul> | The video file to play. This can be a remote url, or a local file |  
