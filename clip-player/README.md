@@ -71,7 +71,7 @@ https:\/\/(?:www.)?tiktok\.com\/@(.*?)\/video\/(.*?)(\?.*?|$|\s)
 
 ## PlayVideoFile
 
-This will 
+This will play either a local video file, or a file that is served up by a web server over http/https.
 
 | NAME | ARGUMENT | DESCRIPTION |  
 | --- | :--- | --- |
