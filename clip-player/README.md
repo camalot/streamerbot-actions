@@ -5,6 +5,7 @@ This is actions and overlay that will play different types of clips.
 - [PlayTwitchClip](#playtwitchclip)
 - [PlayRandomTwitchClip](#playrandomtwitchclip)
 - [PlayTikTokVideo](#playtiktokvideo)
+- [PlayMedalVideo](#playmedalvideo)
 - [PlayVideoFile](#playvideofile)
 
 
@@ -67,6 +68,22 @@ This will play a TikTok video from the tiktok video url
 A regex command that matches the following:
 ```regex
 https:\/\/(?:www.)?tiktok\.com\/@(.*?)\/video\/(.*?)(\?.*?|$|\s)
+```
+
+## PlayMedalVideo
+
+Plays a [medal.tv](https://medal.tv/?ref=DarthMinos_partner) clip.
+
+The Medal desktop client records clips with one button press, posts them on medal.tv, and gives you a shareable link. No lag, no fuss.
+
+| NAME | ARGUMENT | DESCRIPTION |  
+| --- | :--- | --- |
+| Url | <ul><li>`%input0%`</li><li>`%medalVideo%`</li></ul> | The video file to play |  
+
+
+A regex command that matches the following:
+```regex
+https:\/\/(?:www\.)?medal\.tv\/games\/[^\/]+\/clips\/[^\/]+\/[^\/\?]+(?:\?|$)
 ```
 
 ## PlayVideoFile
