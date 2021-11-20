@@ -16,6 +16,8 @@ Vote up on [this suggestion](https://ideas.streamer.bot/posts/159/nuget-support-
 
 # ACTIONS
 
+Import into streamer.bot from the [clip-player.action](./clip-player.action) file.
+
 ## PlayTwitchClip
 
 This will play the clip that is sent in as `%input0%` or `%twitchVideo%`

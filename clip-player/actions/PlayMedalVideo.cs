@@ -1,4 +1,3 @@
-// https://medal.tv/games/rainbow-six/clips/4SsIaq-8GMnDG/AEMWvydxFD8D?invite=cr-MSxOdDksNzEwNDI3LA
 // https://medal.tv/games/rainbow-six/clips/4SsIaq-8GMnDG/TtHqR2RzBeQH
 // @nuget: HtmlAgilityPack
 using System;
@@ -77,16 +76,6 @@ public class CPHInline {
     return true;
   }
 
-  // private string Base64EncodeTiktokVideo(string url, WebClient client) {
-  //   client.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36");
-  //   client.Headers.Add("accept-language", "en-US,en;q=0.9");
-  //   client.Headers.Add("Referer", url);
-
-  //   var data = client.DownloadData(url);
-  //   var b64 = Convert.ToBase64String(data);
-  //   return $"data:video/mp4;base64,{b64}";
-  // }
-
   private MedalData ParseMedalVideoUrl(string medalVideoUrl) {
     try {
       var regex = new Regex(@"https:\/\/(?:www\.)?medal\.tv\/games\/(?<game>[^\/]+)\/clips\/(?<cid>[^\/]+)\/(?<vid>[^\/\?]+)(?:\?|$)");
@@ -143,7 +132,6 @@ public class CPHInline {
             var ttVideoUrl = videoNode.GetAttributeValue("content", "").Replace("&amp;", "&");
             CPH.LogDebug(ttVideoUrl);
             ttData.VideoUrl = ttVideoUrl;
-            //ttData.VideoUrl = Base64EncodeTiktokVideo(ttVideoUrl, client);
           } else {
               CPH.LogDebug("No video found");
           }
@@ -163,19 +151,6 @@ public class CPHInline {
           } else {
             CPH.LogDebug("No video type found");
           }
-          // var hNode = doc.DocumentNode.SelectSingleNode("//meta[@property='og:video:height']");
-          // int h = 0;
-          // if (hNode != null) {
-          //   int.TryParse(hNode.GetAttributeValue("content", "0"), out h);
-          // }
-        
-          // ttData.Height = h;
-          // var wNode = doc.DocumentNode.SelectSingleNode("//meta[@property='og:video:width']");
-          // int w = 0;
-          // if (wNode != null) {
-          //   int.TryParse(wNode.GetAttributeValue("content", "0"), out w);
-          // }          
-          // ttData.Width = w;
           return ttData;
         }
       }
