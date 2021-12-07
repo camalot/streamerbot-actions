@@ -1,0 +1,56 @@
+:root {
+  --font-family: "Source Sans Pro";
+  --font-color: #ddd;
+  --font-size: 3.5em;
+  --font-weight: 900;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: var(--font-family);
+  background-color: transparent;
+}
+
+.main {
+  text-align: center;
+}
+
+.rarity {
+  display: inline-block;
+  color: var(--font-color);
+  font-weight: var(--font-weight);
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+.rarity .rarity-icon {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.rarity .rarity-icon img {
+  height: 96px;
+  margin: 0;
+  padding: 0;
+}
+
+.rarity-count {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  text-align: center;
+  height: 96px;
+  line-height: calc(var(--font-size) / 2.2);
+  font-size: var(--font-size);
+  background-color: transparent;
+  min-width: 100px;
+  max-width: 125px;
+  overflow: hidden;
+  text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px,
+    #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px;
+}

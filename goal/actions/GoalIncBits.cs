@@ -1,13 +1,10 @@
 using System;
 
-public class CPHInline
-{
-  public bool Execute()
-  {
+public class CPHInline {
+  public bool Execute() {
     var increase = 0.01;
 
-    if (args.ContainsKey("bits"))
-    {
+    if (args.ContainsKey("bits")) {
       int count = (int)args["bits"];
       increase = increase * count;
     }
