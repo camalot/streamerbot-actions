@@ -3,8 +3,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Collections.Generic;
-public enum Rarity
-{
+public enum Rarity {
   Common,
   Uncommon,
   Rare,
@@ -14,39 +13,31 @@ public enum Rarity
   UNKNOWN
 }
 [Serializable]
-public class PayloadData
-{
+public class PayloadData {
   [JsonProperty("rarity")]
   [JsonConverter(typeof(StringEnumConverter))]
   public Rarity Rarity { get; set; }
   [JsonProperty("count")]
   public int Count { get; set; } = 0;
 }
-public class CPHInline
-{
-  public bool Execute()
-  {
+public class CPHInline {
+  public bool Execute() {
     var data = CPH.GetGlobalVar<string>("R6S_ALPHAPACK_DATA");
     var dataFilePath = CPH.GetGlobalVar<string>("R6S_ALPHAPACK_DATA_FILE");
 
-    if (data == null || string.IsNullOrWhiteSpace(dataFilePath))
-    {
+    if (data == null || string.IsNullOrWhiteSpace(dataFilePath)) {
       CPH.LogDebug("[IncrementAlphaPackCounter] R6S_ALPHAPACK_DATA or R6S_ALPHAPACK_DATA_FILE is null or empty");
       return false;
     }
 
     var rarityName = string.Empty;
-    if (args.ContainsKey("input0"))
-    {
+    if (args.ContainsKey("input0")) {
       rarityName = (args["input0"] as string).ToLower();
-    }
-    else if (args.ContainsKey("rarity"))
-    {
+    } else if (args.ContainsKey("rarity")) {
       rarityName = (args["rarity"] as string).ToLower();
     }
     var rarity = Rarity.UNKNOWN;
-    switch (rarityName)
-    {
+    switch (rarityName) {
       case "c":
       case "common":
         rarity = Rarity.Common;
@@ -77,8 +68,7 @@ public class CPHInline
     }
     var dataObject = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PayloadData>>(data);
     var rarityKey = Enum.GetName(typeof(Rarity), rarity).ToLower();
-    if (dataObject.ContainsKey(rarityKey))
-    {
+    if (dataObject.ContainsKey(rarityKey)) {
       dataObject[rarityKey].Count++;
     }
 
