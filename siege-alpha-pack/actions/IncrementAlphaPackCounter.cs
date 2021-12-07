@@ -76,7 +76,7 @@ public class CPHInline
       dataObject[rarityKey].Count++;
     }
 
-    CPH.SetArgument("R6S_RARITY", rarityKey);
+    CPH.SetArgument("R6S_RARITY", rarityKey.ToUpper());
     var fileData = Newtonsoft.Json.JsonConvert.SerializeObject(dataObject);
     CPH.SetGlobalVar("R6S_ALPHAPACK_DATA", fileData);
     File.WriteAllText(dataFilePath, fileData);
