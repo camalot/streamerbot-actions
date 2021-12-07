@@ -36,12 +36,12 @@ jobs:
         strict: false 
     - name: Download HtmlAgilityPack
       run: |
-        mkdir -p ./hap
-        curl -S -X GET https://www.nuget.org/api/v2/package/HtmlAgilityPack/1.11.39 -o ./hap/htmlagilitypack.nuget 
-        unzip ./hap/htmlagilitypack.nuget -d ./hap
-        mkdir -p ./clip-player/3rdparty/
-        mv ./hap/lib/Net45/* ./clip-player/3rdparty/
-        rm -rf ./hap
+        mkdir -p ./hap;
+        curl -S -X GET https://www.nuget.org/api/v2/package/HtmlAgilityPack/1.11.39 -o ./hap/htmlagilitypack.nuget; 
+        unzip ./hap/htmlagilitypack.nuget -d ./hap;
+        mkdir -p ./clip-player/3rdparty/;
+        mv ./hap/lib/Net45/* ./clip-player/3rdparty/;
+        rm -rf ./hap;
     - name: Encode and Package
         # for f in goal/actions/*; do 
         #   f_data=$(cat $f | base64 -w 0);
