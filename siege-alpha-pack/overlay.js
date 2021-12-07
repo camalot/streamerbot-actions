@@ -18,9 +18,10 @@
 
 
   function initializeUI() {
-    // $(":root")
-    //   .css("--pb-fill-width", "0%")
-    //   ;
+    $(":root")
+      .css("--font-size", settings.FontSize)
+      .css("--font-color", settings.FontColor)
+      ;
     loadFontsScript(settings.FontName);
 
   }

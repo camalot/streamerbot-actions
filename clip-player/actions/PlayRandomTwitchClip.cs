@@ -10,7 +10,7 @@ public class Payload<T> {
   public string Event { get; set; }
   [JsonProperty("data")]
   public T Data { get; set; }
-}
+} 
 public class VideoPayload {
   [JsonProperty("creator")]
   public string CreatorUserName { get; set; }

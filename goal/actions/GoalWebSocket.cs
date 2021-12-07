@@ -1,14 +1,12 @@
 using System;
 using Newtonsoft.Json;
-public class GoalPayload
-{
+public class GoalPayload {
   [JsonProperty("event")]
   public string Event { get; set; }
   [JsonProperty("data")]
   public GoalPayloadData Data { get; set; }
 }
-public class GoalPayloadData
-{
+public class GoalPayloadData {
   [JsonProperty("increase")]
   public decimal Increase { get; set; } = 0M;
   [JsonProperty("increaseFormatted")]
@@ -25,32 +23,25 @@ public class GoalPayloadData
   public string GoalFormatted { get { return Goal.ToString("c"); } }
 
 }
-public class CPHInline
-{
-  public bool Execute()
-  {
+public class CPHInline {
+  public bool Execute() {
     decimal increase = 0M;
     decimal total = 0M;
     decimal goal = 0M;
-    if (args.ContainsKey("gpbIncrease"))
-    {
+    if (args.ContainsKey("gpbIncrease")) {
       increase = (decimal)args["gpbIncrease"];
     }
 
-    if (args.ContainsKey("gpbTotal"))
-    {
+    if (args.ContainsKey("gpbTotal")) {
       total = (decimal)args["gpbTotal"];
     }
 
-    if (args.ContainsKey("gpbGoal"))
-    {
+    if (args.ContainsKey("gpbGoal")) {
       goal = (decimal)args["gpbGoal"];
     }
-    var payload = new GoalPayload
-    {
+    var payload = new GoalPayload {
       Event = "EVENT_GOAL_UPDATE",
-      Data = new GoalPayloadData
-      {
+      Data = new GoalPayloadData {
         Increase = increase,
         Total = total,
         Goal = goal

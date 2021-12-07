@@ -15,7 +15,7 @@ public class Payload<T> {
   public string Event { get; set; }
   [JsonProperty("data")]
   public T Data { get; set; }
-}
+} 
 public class VideoPayload {
   [JsonProperty("creator")]
   public string CreatorUserName { get; set; }
@@ -51,7 +51,7 @@ public class CPHInline {
 
 
     var tiktok = ParseTiktokVideoUrl(tiktokVideo);
-    
+
     if (tiktok == null) {
       CPH.LogDebug("Unable to get required tiktok data");
       return false;
@@ -164,13 +164,13 @@ public class CPHInline {
           if (hNode != null) {
             int.TryParse(hNode.GetAttributeValue("content", "0"), out h);
           }
-        
+
           ttData.Height = h;
           var wNode = doc.DocumentNode.SelectSingleNode("//meta[@property='og:video:width']");
           int w = 0;
           if (wNode != null) {
             int.TryParse(wNode.GetAttributeValue("content", "0"), out w);
-          }          
+          }
           ttData.Width = w;
 
 
@@ -195,8 +195,7 @@ public class CPHInline {
   }
 }
 
-public class TiktokData
-{
+public class TiktokData {
   public string UserName { get; set; }
   public string VideoId { get; set; }
   public string VideoType { get; set; }

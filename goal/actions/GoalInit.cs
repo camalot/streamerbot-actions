@@ -1,9 +1,7 @@
 using System;
 
-public class CPHInline
-{
-  public bool Execute()
-  {
+public class CPHInline {
+  public bool Execute() {
     var goalFile = CPH.GetGlobalVar<string>("gpb_goal_file", true);
     var currentFile = CPH.GetGlobalVar<string>("gpb_current_file", true);
     decimal goal = 0;
@@ -22,5 +20,5 @@ public class CPHInline
     CPH.RunAction("GoalWebSocket");
 
     return true;
-  }
+  } 
 }

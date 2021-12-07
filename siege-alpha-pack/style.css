@@ -1,5 +1,6 @@
 :root {
   --font-family: "Source Sans Pro";
+  --font-color: #ddd;
   --font-size: 3.5em;
   --font-weight: 900;
 }
@@ -19,7 +20,7 @@ body {
 
 .rarity {
   display: inline-block;
-  color: #eee;
+  color: var(--font-color);
   font-weight: var(--font-weight);
   margin: 0;
   padding: 0;

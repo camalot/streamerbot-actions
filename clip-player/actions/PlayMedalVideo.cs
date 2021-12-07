@@ -49,7 +49,7 @@ public class CPHInline {
 
 
     var medal = ParseMedalVideoUrl(medalVideo);
-    
+
     if (medal == null) {
       CPH.LogDebug("Unable to get required medal data");
       return false;
@@ -133,7 +133,7 @@ public class CPHInline {
             CPH.LogDebug(ttVideoUrl);
             ttData.VideoUrl = ttVideoUrl;
           } else {
-              CPH.LogDebug("No video found");
+            CPH.LogDebug("No video found");
           }
 
           var thumbNode = doc.DocumentNode.SelectSingleNode("//meta[@property='og:image']");
@@ -162,8 +162,7 @@ public class CPHInline {
   }
 }
 
-public class MedalData
-{
+public class MedalData {
   public string ContentId { get; set; }
   public string UserName { get; set; }
   public string VideoId { get; set; }

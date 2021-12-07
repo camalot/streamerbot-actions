@@ -1,9 +1,7 @@
 using System;
 
-public class CPHInline
-{
-  public bool Execute()
-  {
+public class CPHInline {
+  public bool Execute() {
     var goalFile = CPH.GetGlobalVar<string>("gpb_goal_file", true);
     var currentFile = CPH.GetGlobalVar<string>("gpb_current_file", true);
     decimal goal = 0;
@@ -13,17 +11,12 @@ public class CPHInline
     decimal.TryParse(currentLines, out current);
     decimal.TryParse(goalLines, out goal);
 
-    decimal increase = 0;
-    if (args.ContainsKey("input0"))
-    {
+    decimal increase = 0; 
+    if (args.ContainsKey("input0")) {
       decimal.TryParse(args["input0"] as string, out increase);
-    }
-    else if (args.ContainsKey("amount"))
-    {
+    } else if (args.ContainsKey("amount")) {
       decimal.TryParse(args["amount"] as string, out increase);
-    }
-    else
-    {
+    } else {
       return true;
     }
     current += increase;
