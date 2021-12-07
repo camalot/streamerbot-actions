@@ -13,8 +13,7 @@ public enum Rarity {
   Duplicate
 }
 [Serializable]
-public class Payload
-{
+public class Payload {
   [JsonProperty("event")]
   public string Event { get; set; } = "EVENT_R6S_ALPHAPACK";
   [JsonProperty("data")]
@@ -30,18 +29,15 @@ public class Payload
 
 
 [Serializable]
-public class PayloadData
-{
+public class PayloadData {
   [JsonProperty("rarity")]
   [JsonConverter(typeof(StringEnumConverter))]
   public Rarity Rarity { get; set; }
   [JsonProperty("count")]
   public int Count { get; set; } = 0;
 }
-public class CPHInline
-{
-  public bool Execute()
-  {
+public class CPHInline {
+  public bool Execute() {
     var payload = new Payload();
     var data = CPH.GetGlobalVar<string>("R6S_ALPHAPACK_DATA");
     if (string.IsNullOrWhiteSpace(data)) {

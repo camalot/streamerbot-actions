@@ -3,8 +3,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Collections.Generic;
-public enum Rarity
-{
+public enum Rarity {
   Common,
   Uncommon,
   Rare,
@@ -13,8 +12,7 @@ public enum Rarity
   Duplicate
 }
 [Serializable]
-public class InitData : MarshalByRefObject
-{
+public class InitData : MarshalByRefObject {
   [JsonProperty("common")]
   public PayloadData Common { get; set; } = new PayloadData() { Rarity = Rarity.Common };
   [JsonProperty("uncommon")]
@@ -29,22 +27,18 @@ public class InitData : MarshalByRefObject
   public PayloadData Duplicate { get; set; } = new PayloadData() { Rarity = Rarity.Duplicate };
 }
 
-public class PayloadData
-{
+public class PayloadData {
   [JsonProperty("rarity")]
   [JsonConverter(typeof(StringEnumConverter))]
   public Rarity Rarity { get; set; }
   [JsonProperty("count")]
   public int Count { get; set; } = 0;
 }
-public class CPHInline
-{
-  public bool Execute()
-  {
+public class CPHInline {
+  public bool Execute() {
     var dataFilePath = CPH.GetGlobalVar<string>("R6S_ALPHAPACK_DATA_FILE");
 
-    if (string.IsNullOrWhiteSpace(dataFilePath))
-    {
+    if (string.IsNullOrWhiteSpace(dataFilePath)) {
       CPH.LogDebug("[IncrementAlphaPackCounter] R6S_ALPHAPACK_DATA_FILE is null or empty");
       return false;
     }
