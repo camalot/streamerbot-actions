@@ -12,6 +12,7 @@ body {
   overflow: hidden;
   font-family: var(--font-family);
   background-color: transparent;
+  cursor: default;
 }
 
 .main {
