@@ -1,7 +1,19 @@
 #!/usr/bin/env bash
-input_file="$1";
+input_folder="$1";
+input_file="$input_folder/actions.json";
 output_file="${input_file%.*}.action";
+
+tmp_file="tmp.actions.json";
+cp $input_file $tmp_file;
+
+for f in $input_folder/actions/*; do 
+  f_data=$(cat $f | base64 -w 0);
+  sed -i "s|\${$f}|$f_data|" $tmp_file; 
+done;
+
+
 echo -n -e "\x78\x83\x52\x69" > action.dat;
-gzip -ck "$1" >> action.dat;
+gzip -ck "$input_file" >> action.dat;
 base64 -w 0 action.dat > $output_file
 rm -f action.dat
+rm -f $tmp_file;

@@ -95,3 +95,13 @@ This will play either a local video file, or a file that is served up by a web s
 | NAME | ARGUMENT | DESCRIPTION |  
 | --- | :--- | --- |
 | Url | <ul><li>`%input0%`</li><li>`%video%`</li></ul> | The video file to play. This can be a remote url, or a local file |  
+
+
+## OBS / SLOBS CONFIGURATION
+
+### ADD THE OVERLAY
+Add a browser source and point it to your path of `clip-player/overlay.html`. This should **NOT** be a `local file`. You should use a `file://` path like the following.
+
+![](https://i.imgur.com/D5Dge8f.png)  
+
+Set the width/height to your canvas size, example: 1920x1080, then resize it in OBS to keep the proper scale.
