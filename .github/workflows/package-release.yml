@@ -1,18 +1,12 @@
-# https://www.nuget.org/api/v2/package/HtmlAgilityPack/1.11.39
-
 ---
-name: Clip Player Actions Release
+name: Shoutout Actions Release
 on:
   push:
     branches:
     - develop
-    paths:
-    - 'clip-player/**'
   pull_request:
     branches:
     - develop
-    paths:
-    - 'clip-player/**'
     types:
     - closed
 jobs:
@@ -34,24 +28,16 @@ jobs:
       with:
         version: ${{ steps.previoustag.outputs.tag }}
         strict: false 
-    - name: Download HtmlAgilityPack
-      run: |
-        mkdir -p ./hap;
-        curl -S -X GET https://www.nuget.org/api/v2/package/HtmlAgilityPack/1.11.39 -o ./hap/htmlagilitypack.nuget; 
-        unzip ./hap/htmlagilitypack.nuget -d ./hap;
-        mkdir -p ./clip-player/3rdparty/;
-        mv ./hap/lib/Net45/* ./clip-player/3rdparty/;
-        rm -rf ./hap;
     - name: Encode and Package
-        # for f in goal/actions/*; do 
+        # for f in shoutout/actions/*; do 
         #   f_data=$(cat $f | base64 -w 0);
-        #   sed -i "s|\${$f}|$f_data|" goal/actions.json; 
+        #   sed -i "s|\${$f}|$f_data|" shoutout/actions.json; 
         # done;
         # echo -n -e "\x78\x83\x52\x69" > action.dat;
-        # gzip -ck "goal/actions.json" >> action.dat;
+        # gzip -ck "shoutout/actions.json" >> action.dat;
         # base64 -w 0 action.dat > goal/goal.action;
       run: |
-        zip -x $(tr '\n' ' ' < clip-player/.zipignore) -r clip-player-overlay-${{ steps.semvers.outputs.v_patch }}.zip ./clip-player/**
+        zip -x $(tr '\n' ' ' < ./.zipignore) -r streamerbot-actions-${{ steps.semvers.outputs.v_patch }}.zip ./**
     - name: Create the Version Tag
       uses: mathieudutour/github-tag-action@v5.6
       with:
@@ -61,8 +47,8 @@ jobs:
     - name: Create Release
       uses: ncipollo/release-action@v1.8.6
       with:
-        artifacts: clip-player-overlay-${{ steps.semvers.outputs.v_patch }}.zip
-        name: clip-player-overlay-${{ steps.semvers.outputs.v_patch }}
+        artifacts: streamerbot-actions-${{ steps.semvers.outputs.v_patch }}.zip
+        name: streamerbot-actions-${{ steps.semvers.outputs.v_patch }}
         tag: ${{ steps.semvers.outputs.v_patch }}
         token: "${{ github.token }}"
     - name: Merge develop -> main

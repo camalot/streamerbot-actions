@@ -1,5 +1,0 @@
-./clip-player/actions/**
-./clip-player/actions/
-**/actions.json
-**/.jshintrc
-**/.zipignore

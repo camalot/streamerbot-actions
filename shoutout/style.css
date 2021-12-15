@@ -1,15 +1,17 @@
 :root {
-	--link-color: rgba(230,126,34,1);
-	--name-color: rgba(255, 0, 0, 1);
+	--link-color: rgba(255,0,0,1);
+	--name-color: rgba(255, 255, 255, 1);
 	--link-visible: inline-block;
   --font-family: 'Bakbak One'
 }
 
+body {
+	background-color: #222;
+}
 
 body, html {
 	padding: 0;
 	margin: 0;
-  background-color: #222;
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
@@ -85,9 +87,11 @@ div.shadow {
 	border-radius: 0%;
 }
 
+#alert.animate__none, 
 #alert.none {
 	animation-name: no-animation;
 }
+
 
 @keyframes no-animation {
 	0% {
