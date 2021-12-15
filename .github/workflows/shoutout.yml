@@ -1,5 +1,5 @@
 ---
-name: Goal Actions Release
+name: Shoutput Actions Release
 on:
   push:
     branches:

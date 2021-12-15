@@ -5,11 +5,13 @@
   --font-family: 'Bakbak One'
 }
 
+body {
+	background-color: #222;
+}
 
 body, html {
 	padding: 0;
 	margin: 0;
-  background-color: #222;
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
