@@ -1,8 +1,12 @@
 # SHOUTOUT OVERLAY
 
+This is [Streamer.Bot](https://streamer.bot) actions with overlay to track revenue for a goal.
+
+These actions can be imported in to streamer.bot from the file: `./shoutout.action` in the release package
+
 ## ARGUMENTS
 
-These arguments can be added to the action to change the display of the overlay.
+These arguments can be added to the action to change the display of the overlay. If they are not set, the defaults will be used
 
 | NAME | DESCRIPTION | DEFAULT |
 | --- | --- | --- |
