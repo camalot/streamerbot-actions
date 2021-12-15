@@ -1,0 +1,99 @@
+:root {
+	--link-color: rgba(230,126,34,1);
+	--name-color: rgba(255, 0, 0, 1);
+	--link-visible: inline-block;
+  --font-family: 'Bakbak One'
+}
+
+
+body, html {
+	padding: 0;
+	margin: 0;
+  background-color: #222;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	border: none;
+	font-size: 76px/1;
+	font-weight: bold;
+  font-family: var(--font-family);
+	text-align: center;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	letter-spacing: 3px;
+
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+#alert {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	width:50vw;
+	height:50vh;
+	margin-top: -30vh; /*set to a negative number 1/2 of your height*/
+	margin-left: -37vw; /*set to a negative number 1/2 of your width*/
+	padding: 10vh 20vh 8vh 20vh;
+}
+
+#link {
+	text-align: center;
+	font-size: 30px;
+	color: var(--link-color);
+	display: var(--link-visible, inline-block);
+}
+#name {
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 5px;
+	border-radius: inherit;
+	color: var(--name-color);
+}
+
+img.shadow {
+	box-shadow: 0px 3px 8px #222, inset 0px 2px 3px #555;
+}
+div.shadow {
+	text-shadow: 0px 3px 5px #222;
+}
+
+#logo {
+	text-align: center;
+	margin-bottom: 5px;
+	border-radius: inherit;
+}
+#logo img {
+	width:200px;
+	height: auto;
+}
+
+#logo img.rounded {
+	border-radius: 10%;
+}
+
+#logo img.circle {
+	border-radius: 50%;
+}
+
+#logo img.square {
+	border-radius: 0%;
+}
+
+#alert.none {
+	animation-name: no-animation;
+}
+
+@keyframes no-animation {
+	0% {
+
+	}
+	100% {
+
+	}
+}

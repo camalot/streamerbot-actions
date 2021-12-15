@@ -1,0 +1,5 @@
+./shoutout/actions/**
+./shoutout/actions/
+**/actions.json
+**/.jshintrc
+**/.zipignore
