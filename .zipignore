@@ -1,0 +1,10 @@
+**/actions/**
+**/actions/
+**/actions.json
+**/.jshintrc
+**/.zipignore
+action-decode
+action-encode
+omnisharp.json
+package-snapshot.sh
+streamerbot-actions-1.0.0-SNAPSHOT.zip

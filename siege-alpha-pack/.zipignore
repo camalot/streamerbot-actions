@@ -1,6 +1,0 @@
-./siege-alpha-pack/actions/**
-./siege-alpha-pack/actions/
-**/actions.json
-**/.jshintrc
-**/.zipignore
-./siege-alpha-pack/images/*.pdn

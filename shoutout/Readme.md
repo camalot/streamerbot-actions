@@ -21,6 +21,13 @@ These arguments can be added to the action to change the display of the overlay.
 | `imageShape` | Profile image shape: `rounded,square,circle` | `circle` |
 | `showLink` | Disable / Enable the visibility of the link text line | `true` |
 | `linkText` | The text line below the users name. `{username}` will be replaced with the user's name. | `twitch.tv/{username}`
+
+## Enable StreamerBot WebSocket Server
+
+![](https://i.imgur.com/gYS26gE.png)
+
+After you enable the streamerbot websocket server, you will need to update the `SB_WebSocket` value in `./settings.js` if you do not use port `1377`.
+
 ## Command
 
 Create a command, for example `!so`, and set the action to be the `Shoutout` action.
