@@ -1,5 +1,5 @@
 ---
-name: Shoutout Actions Release
+name: StreamerBot Actions Release
 on:
   push:
     branches:
