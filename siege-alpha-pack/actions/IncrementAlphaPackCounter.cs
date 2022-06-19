@@ -4,6 +4,9 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Collections.Generic;
 public enum Rarity {
+  Alpha,
+  Bravo,
+  Special,
   Common,
   Uncommon,
   Rare,
@@ -38,6 +41,18 @@ public class CPHInline {
     }
     var rarity = Rarity.UNKNOWN;
     switch (rarityName) {
+      case "a":
+      case "alpha":
+          rarity = Rarity.Alpha;
+          break;
+      case "b":
+      case "bravo":
+          rarity = Rarity.Bravo;
+          break;
+      case "s":
+      case "special":
+        rarity = Rarity.Special;
+        break;
       case "c":
       case "common":
         rarity = Rarity.Common;

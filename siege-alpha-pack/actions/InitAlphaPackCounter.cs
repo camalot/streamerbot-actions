@@ -4,6 +4,9 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Collections.Generic;
 public enum Rarity {
+  Alpha,
+  Bravo,
+  Special,
   Common,
   Uncommon,
   Rare,
