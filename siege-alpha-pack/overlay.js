@@ -84,6 +84,18 @@
               {
                   "event": "EVENT_R6S_ALPHAPACK",
                   "data": {
+                    "alpha": {
+                      "rarity": "Alpha",
+                      "count": 1
+                    },
+                    "bravo": {
+                      "rarity": "Bravo",
+                      "count": 1
+                    },
+                    "special": {
+                      "rarity": "Special",
+                      "count": 1
+                    },
                     "common": {
                       "rarity": "Common",
                       "count": 1
